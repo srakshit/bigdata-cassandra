@@ -12,7 +12,7 @@ RUN chmod +x /opt/cassandra-download.sh \
     && sleep 1 \
     && /opt/cassandra-download.sh \
     && rm /opt/cassandra-download.sh \
-    && ln -s /opt/apache-cassandra-$CASSANDRA_VERSION $CASSANDRA_HOME \
+    && ln -s /opt/cassandra-$CASSANDRA_VERSION $CASSANDRA_HOME \
     && addgroup cassandra \
     && adduser -S -G cassandra cassandra \
     && chown cassandra:cassandra -R /opt/cassandra* \
