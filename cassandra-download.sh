@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo "Downloading and unzipping cassandra-$CASSANDRA_VERSION"
+CASSANDRA_VERSION=2.1.17
+
+echo "Downloading and unzipping apache cassandra-$CASSANDRA_VERSION"
 mirror=$(curl --stderr /dev/null https://www.apache.org/dyn/closer.cgi\?as_json\=1 | jq -r '.preferred')
 url="$mirror/cassandra/$CASSANDRA_VERSION/apache-cassandra-${CASSANDRA_VERSION}-bin.tar.gz"
-curl $url | tar xz -C /opt/cassandra-$CASSANDRA_VERSION 
+curl $url | tar xz -C /opt/
