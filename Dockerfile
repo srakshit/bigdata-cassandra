@@ -8,6 +8,8 @@ ENV CASSANDRA_HOME="/opt/cassandra" \
 
 ADD ./cassandra-* /opt/
 
+RUN apk add --no-cache python python-dev
+
 RUN chmod +x /opt/cassandra-download.sh \
     && sleep 1 \
     && /opt/cassandra-download.sh \
